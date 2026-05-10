@@ -9,5 +9,4 @@ class Solution:
                 return False
             left += 1
             right -= 1
-
         return True
