@@ -6,7 +6,7 @@ class Solution:
         for num in nums:
             # If count reaches 0, we pick the current number as the new candidate
             if count == 0:
-                candidate = num
+             candidate = num
             
             # Increment count if the number matches our candidate, otherwise decrement
             count += 1 if num == candidate else -1
