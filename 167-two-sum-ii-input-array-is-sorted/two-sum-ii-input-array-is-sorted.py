@@ -1,13 +1,18 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        left, right=0, len(numbers)-1
-
-        while left<right:
-            s=numbers[left]+numbers[right]
-            if s==target:
-                return[left+1,right+1]
+        # Do pointers initialize karein: ek start mein aur ek end mein
+        left = 0
+        right = len(numbers) - 1
+        
+        while left < right:
+            current_sum = numbers[left] + numbers[right]
             
-            if s<target:
-                left+=1
+            if current_sum == target:
+                # 1-indexed array return karna hai isliye +1 kiya
+                return [left + 1, right + 1]
+            elif current_sum < target:
+                # Agar sum chota hai, toh left pointer ko aage badhayein
+                left += 1
             else:
-                right-=1
+                # Agar sum bada hai, toh right pointer ko peeche layein
+                right -= 1
