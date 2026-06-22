@@ -7,9 +7,12 @@ class Solution:
         while left < right:
             mid = (left + right) // 2
             
+
             if sum(math.ceil(pile / mid) for pile in piles) <= h:
                 right = mid  
             else:
-                left = mid + 1 
-                
+                left=mid+1
         return left
+                
+                
+        
